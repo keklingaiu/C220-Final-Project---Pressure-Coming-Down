@@ -2,6 +2,9 @@ player character: divide each frame by 32x32
 door: divide each frame by 64x64
 green & red light: divide each frame by 64x64
 
+lazer camera: 32x32
+lazer: 32x32
+
 (See the example iamge that I added)
 
 For the animation speed, I don't have control over it right now.
