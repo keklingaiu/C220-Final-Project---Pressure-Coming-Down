@@ -1,0 +1,12 @@
+player character: divide each frame by 32x32
+door: divide each frame by 64x64
+green & red light: divide each frame by 64x64
+
+(See the example iamge that I added)
+
+For the animation speed, I don't have control over it right now.
+I believe you can set the speed of animation inside the
+Godot engine.
+
+If you're running the game at the speed of 30 frames per sec,
+You'll probably have to slow down the animation speed.
