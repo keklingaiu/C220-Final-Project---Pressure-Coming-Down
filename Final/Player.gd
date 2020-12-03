@@ -31,6 +31,7 @@ func _process(delta):
 	if direction > 0 and $AnimatedSprite.flip_h: $AnimatedSprite.flip_h = false
 	
 	if position.y > deathHeight:
+		$PlayerFall.play()
 		die()
 	
 	onGround = raycast1.is_colliding() or raycast2.is_colliding()
@@ -49,6 +50,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("Jump") and onGround:
 		velocity.y -= jump
 		$AnimatedSprite.animation = "Jump"
+		$PlayerJump.play()
 		jumped = true
 	
 	if Input.is_action_just_pressed("Left"):
@@ -56,6 +58,7 @@ func _process(delta):
 		velocity.x = speed * -1
 		if $AnimatedSprite.animation != "Jump":
 			$AnimatedSprite.animation = "Walking"
+			$PlayerWalk.play()
 			currentAnimation = "Walking"
 		
 	if Input.is_action_just_pressed("Right"):
@@ -63,6 +66,7 @@ func _process(delta):
 		velocity.x = speed
 		if $AnimatedSprite.animation != "Jump":
 			$AnimatedSprite.animation = "Walking"
+			$PlayerWalk.play()
 			currentAnimation = "Walking"
 	
 	if (Input.is_action_just_released("Left") and not Input.is_action_pressed("Right")) or (Input.is_action_just_released("Right") and not Input.is_action_pressed("Left")):
@@ -75,4 +79,5 @@ func _process(delta):
 		move_and_collide(velocity)
 
 func die():
+	$PlayerFall.play()
 	get_parent().queue_free()

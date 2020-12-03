@@ -1,9 +1,5 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 export (NodePath) var exit
 
 onready var exitNode = get_node(exit)
@@ -18,6 +14,7 @@ func _ready():
 
 func openDoor() :
 	$AnimatedSprite.play("Open")
+	$DoorOpen.play()
 	exitNode.exitReady = true
 	
 

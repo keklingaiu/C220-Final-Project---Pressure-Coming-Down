@@ -23,6 +23,7 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.name == "Box":
 		get_node("button_default").set_texture(pressedTexture)
+		$ButtonAudio.play()
 		emit_signal("button_pressed")
 		body.set_collision_layer_bit(0, false)
 		body.set_collision_mask_bit(0, false)

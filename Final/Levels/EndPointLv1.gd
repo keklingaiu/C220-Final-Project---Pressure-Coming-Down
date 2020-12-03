@@ -5,7 +5,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-export var level = preload("res://Levels/Level1.tscn")
+export var level = preload("res://Levels/Level2.tscn")
 
 onready var area = get_node("Area2D")
 
