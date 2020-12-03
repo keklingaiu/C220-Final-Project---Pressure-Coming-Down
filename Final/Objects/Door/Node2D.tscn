@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/spr_red_light_strip.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/door_open.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/spr_door_opening_strip.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Door/Door.gd" type="Script" id=3]
 
-[node name="Node2D" type="Node2D"]
+[node name="Door" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="SprDoor" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+hframes = 8
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="SprLight" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 2
