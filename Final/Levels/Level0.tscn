@@ -142,7 +142,9 @@ position = Vector2( 726.498, 411.976 )
 format = 1
 
 [node name="Box" parent="." instance=ExtResource( 2 )]
-position = Vector2( 400.421, 414.571 )
+position = Vector2( 381.573, 413.073 )
+mass = 1.07
+gravity_scale = 128.0
 
 [node name="Button" parent="." instance=ExtResource( 3 )]
 position = Vector2( 572.342, 414.571 )

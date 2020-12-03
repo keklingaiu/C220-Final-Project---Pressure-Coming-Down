@@ -21,3 +21,4 @@ func openDoor() :
 
 func _on_Button_button_pressed():
 	openDoor() # Replace with function body.
+
