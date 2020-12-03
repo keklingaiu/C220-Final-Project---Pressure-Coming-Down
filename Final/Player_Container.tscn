@@ -102,5 +102,5 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 15 )
 animation = "Idle"
-frame = 1
+frame = 3
 playing = true
