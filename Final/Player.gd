@@ -71,4 +71,4 @@ func _process(delta):
 		move_and_collide(velocity)
 
 func die():
-	queue_free()
+	get_parent().queue_free()
