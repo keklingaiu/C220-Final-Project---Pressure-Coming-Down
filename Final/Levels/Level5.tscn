@@ -1,11 +1,10 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Sprites/block_top.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/background_tile.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/block_bottom.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/spr_door_one_frame.png" type="Texture" id=4]
 [ext_resource path="res://StartPoint.gd" type="Script" id=5]
-[ext_resource path="res://EndPoint.gd" type="Script" id=6]
 [ext_resource path="res://Button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Door.gd" type="Script" id=8]
 [ext_resource path="res://Sprites/spr_door_opening_strip.png" type="Texture" id=9]
@@ -149,8 +148,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=14]
-
 [node name="Game" type="Node2D"]
 
 [node name="Background" type="TileMap" parent="."]
@@ -198,13 +195,3 @@ position = Vector2( 679.737, 304.886 )
 stream = ExtResource( 12 )
 volume_db = -35.0
 autoplay = true
-
-[node name="EndPoint" type="Node2D" parent="."]
-position = Vector2( 1005.11, 563.929 )
-script = ExtResource( 6 )
-
-[node name="Area2D" type="Area2D" parent="EndPoint"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EndPoint/Area2D"]
-shape = SubResource( 14 )
-[connection signal="body_entered" from="EndPoint/Area2D" to="EndPoint" method="_on_Area2D_body_entered"]
