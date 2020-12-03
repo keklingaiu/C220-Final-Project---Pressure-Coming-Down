@@ -70,7 +70,7 @@ animations = [ {
 "frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "Walking",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ SubResource( 14 ) ],
 "loop": true,
@@ -102,5 +102,5 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 15 )
 animation = "Idle"
-frame = 3
+frame = 1
 playing = true

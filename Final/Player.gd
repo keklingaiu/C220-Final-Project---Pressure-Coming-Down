@@ -14,8 +14,8 @@ var jumped = false
 onready var raycast1 = get_node("RayCast2D")
 onready var raycast2 = get_node("RayCast2D2")
 
-export var speed = 5
-export var jump = 5
+export var speed = 3
+export var jump = 8
 export var gravity = Vector2(0, 30)
 export var deathHeight = 1000
 
@@ -39,7 +39,10 @@ func _process(delta):
 		velocity.y += gravity.y * delta
 	elif velocity.y != 0:
 		if jumped:
-			$AnimatedSprite.animation = "Idle"
+			if Input.is_action_pressed("Left") or Input.is_action_pressed("Right"):
+				$AnimatedSprite.animation = "Walking"
+			else:
+				$AnimatedSprite.animation = "Idle"
 			jumped = false
 		velocity.y = 0
 	
@@ -64,8 +67,9 @@ func _process(delta):
 	
 	if (Input.is_action_just_released("Left") and not Input.is_action_pressed("Right")) or (Input.is_action_just_released("Right") and not Input.is_action_pressed("Left")):
 			velocity = Vector2.ZERO
-			$AnimatedSprite.animation = "Idle"
-			currentAnimation = "Idle"
+			if onGround:
+				$AnimatedSprite.animation = "Idle"
+				currentAnimation = "Idle"
 	
 	if velocity != Vector2.ZERO:
 		move_and_collide(velocity)
