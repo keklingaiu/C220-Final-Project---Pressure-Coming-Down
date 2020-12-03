@@ -39,7 +39,7 @@ func _process(delta):
 		velocity.y += gravity.y * delta
 	elif velocity.y != 0:
 		if jumped:
-			$AnimatedSprite.animation = currentAnimation
+			$AnimatedSprite.animation = "Idle"
 			jumped = false
 		velocity.y = 0
 	
