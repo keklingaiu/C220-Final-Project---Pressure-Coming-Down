@@ -20,7 +20,4 @@ Assets, or resources used
 ## Future Development
 
 # Created by: Group Name
-Andrew: Programming
-Sam: Sound
-Sonny: 2D Sprite
-Victor: Level Design
+Andrew: Programming, Sam: Sound, Sonny: 2D Sprite, Victor: Level Design
