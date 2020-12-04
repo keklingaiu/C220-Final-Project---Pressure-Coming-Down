@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://EndPoint.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Box.tscn" type="PackedScene" id=2]
@@ -11,8 +11,7 @@
 [ext_resource path="res://Sprites/spr_door_opening_strip.png" type="Texture" id=9]
 [ext_resource path="res://Audio/MainSong.ogg" type="AudioStream" id=10]
 [ext_resource path="res://Audio/DoorOpen.wav" type="AudioStream" id=11]
-[ext_resource path="res://Objects/Giant Press/Timer.gd" type="Script" id=12]
-[ext_resource path="res://Font/8BitText.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://TimerText.tscn" type="PackedScene" id=12]
 
 [sub_resource type="TileSet" id=1]
 0/name = "background_tile.png 0"
@@ -120,12 +119,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="DynamicFont" id=16]
-size = 32
-font_data = ExtResource( 13 )
-
-[sub_resource type="GDScript" id=17]
-
 [node name="Game" type="Node2D"]
 
 [node name="Background" type="TileMap" parent="."]
@@ -176,19 +169,5 @@ stream = ExtResource( 10 )
 volume_db = -35.0
 autoplay = true
 
-[node name="TimerText" type="RichTextLabel" parent="."]
-margin_left = 738.0
-margin_top = 48.0
-margin_right = 792.0
-margin_bottom = 109.0
-custom_fonts/normal_font = SubResource( 16 )
-script = ExtResource( 12 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Timer" type="Timer" parent="TimerText"]
-autostart = true
-script = SubResource( 17 )
+[node name="TimerText" parent="." instance=ExtResource( 12 )]
 [connection signal="button_pressed" from="Button" to="Door" method="_on_Button_button_pressed"]
-[connection signal="timeout" from="TimerText/Timer" to="TimerText" method="_on_Timer_timeout"]
