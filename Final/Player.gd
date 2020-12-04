@@ -34,6 +34,7 @@ func _process(delta):
 		$PlayerFall.play()
 		die()
 	
+	
 	onGround = raycast1.is_colliding() or raycast2.is_colliding()
 	
 	if not onGround:

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/GiantPress.png" type="Texture" id=1]
+
+[node name="GiantPress" type="Sprite"]
+position = Vector2( 520.842, -166.761 )
+scale = Vector2( 0.58374, 0.991676 )
+texture = ExtResource( 1 )

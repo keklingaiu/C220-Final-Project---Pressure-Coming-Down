@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Objects/Giant Press/Timer.gd" type="Script" id=1]
+[ext_resource path="res://Font/8BitText.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=15]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="GDScript" id=14]
+
+[node name="Timer" type="RichTextLabel"]
+margin_left = 738.0
+margin_top = 48.0
+margin_right = 792.0
+margin_bottom = 109.0
+custom_fonts/normal_font = SubResource( 15 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = SubResource( 14 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
