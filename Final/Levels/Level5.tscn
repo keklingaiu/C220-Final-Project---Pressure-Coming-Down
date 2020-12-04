@@ -195,3 +195,4 @@ position = Vector2( 679.737, 304.886 )
 stream = ExtResource( 12 )
 volume_db = -35.0
 autoplay = true
+[connection signal="button_pressed" from="Button" to="Door" method="_on_Button_button_pressed"]
