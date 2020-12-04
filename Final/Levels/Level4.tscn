@@ -211,4 +211,5 @@ shape = SubResource( 14 )
 
 [node name="Moving_Platform" parent="." instance=ExtResource( 13 )]
 position = Vector2( 711.225, 593.084 )
+[connection signal="button_pressed" from="Button" to="Door" method="_on_Button_button_pressed"]
 [connection signal="body_entered" from="EndPoint/Area2D" to="EndPoint" method="_on_Area2D_body_entered"]

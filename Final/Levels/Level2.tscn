@@ -207,4 +207,5 @@ script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EndPoint/Area2D"]
 shape = SubResource( 14 )
+[connection signal="button_pressed" from="Button" to="Door" method="_on_Button_button_pressed"]
 [connection signal="body_entered" from="EndPoint/Area2D" to="EndPoint" method="_on_Area2D_body_entered"]

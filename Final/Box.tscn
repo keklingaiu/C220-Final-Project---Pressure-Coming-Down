@@ -11,6 +11,7 @@ extents = Vector2( 16, 16 )
 [node name="Box" type="RigidBody2D"]
 position = Vector2( 250, 240 )
 physics_material_override = SubResource( 1 )
+gravity_scale = 100.0
 linear_damp = 70.0
 
 [node name="Sprite" type="Sprite" parent="."]

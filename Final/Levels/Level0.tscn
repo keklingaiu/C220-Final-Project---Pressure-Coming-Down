@@ -152,7 +152,6 @@ position = Vector2( 572.342, 414.571 )
 [node name="Door" type="Node2D" parent="."]
 position = Vector2( 116.611, 171.121 )
 script = ExtResource( 4 )
-exit = NodePath("../EndPoint")
 
 [node name="DoorOpen" type="AudioStreamPlayer2D" parent="Door"]
 position = Vector2( -116.611, -171.121 )

@@ -1,8 +1,6 @@
 extends Node2D
 
-export (NodePath) var exit
-
-onready var exitNode = get_node(exit)
+onready var exitNode = get_node("/root/Game/EndPoint")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
