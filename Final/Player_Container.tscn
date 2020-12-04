@@ -117,7 +117,6 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 15 )
 animation = "Idle"
-frame = 1
 playing = true
 
 [node name="PlayerWalk" type="AudioStreamPlayer2D" parent="Player"]
@@ -132,7 +131,7 @@ volume_db = 10.0
 stream = ExtResource( 5 )
 volume_db = 10.0
 
-[node name="Timer" type="RichTextLabel" parent="."]
+[node name="TimerText" type="RichTextLabel" parent="."]
 margin_left = 738.0
 margin_top = 48.0
 margin_right = 792.0
@@ -143,7 +142,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="Timer"]
+[node name="Timer" type="Timer" parent="TimerText"]
 autostart = true
 script = SubResource( 17 )
-[connection signal="timeout" from="Timer/Timer" to="Timer" method="_on_Timer_timeout"]
+[connection signal="timeout" from="TimerText/Timer" to="TimerText" method="_on_Timer_timeout"]
