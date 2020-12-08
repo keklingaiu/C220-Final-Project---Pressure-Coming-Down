@@ -14,10 +14,10 @@ var jumped = false
 onready var raycast1 = get_node("RayCast2D")
 onready var raycast2 = get_node("RayCast2D2")
 
-export var speed = 3
-export var jump = 8
-export var gravity = Vector2(0, 30)
-export var deathHeight = 1000
+export var speed = 200
+export var jump = 340
+export var gravity = Vector2(0, 550)
+export var deathHeight = 500
 
 
 # Called when the node enters the scene tree for the first time.
@@ -77,7 +77,7 @@ func _process(delta):
 				currentAnimation = "Idle"
 	
 	if velocity != Vector2.ZERO:
-		move_and_collide(velocity)
+		move_and_slide(velocity)
 
 func die():
 	$PlayerFall.play()

@@ -13,7 +13,7 @@ func _ready():
 func openDoor() :
 	$AnimatedSprite.play("Open")
 	$DoorOpen.play()
-	exitNode.exitReady = true
+	#exitNode.exitReady = true
 	
 
 
