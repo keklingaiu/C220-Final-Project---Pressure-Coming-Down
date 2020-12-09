@@ -194,7 +194,7 @@ stream = ExtResource( 11 )
 volume_db = 15.0
 
 [node name="Box" parent="." instance=ExtResource( 10 )]
-position = Vector2( 58.4838, 272.015 )
+position = Vector2( 82.5663, 271.307 )
 
 [node name="Background Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
@@ -211,7 +211,7 @@ script = ExtResource( 6 )
 shape = SubResource( 14 )
 
 [node name="Moving_Platform" parent="." instance=ExtResource( 13 )]
-position = Vector2( 711.225, 593.084 )
+position = Vector2( 684.309, 590.959 )
 
 [node name="TimerText" parent="." instance=ExtResource( 16 )]
 margin_left = 900.921

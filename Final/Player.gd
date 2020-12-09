@@ -17,7 +17,7 @@ onready var raycast2 = get_node("RayCast2D2")
 export var speed = 200
 export var jump = 340
 export var gravity = Vector2(0, 550)
-export var deathHeight = 500
+export var deathHeight = 1000
 
 
 # Called when the node enters the scene tree for the first time.
